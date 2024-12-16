@@ -9,23 +9,23 @@ import javax.management.loading.PrivateClassLoader;
 /**
  * 
  * @author llq
- *Êý¾Ý¿âÁ¬util
+ *ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½util
  */
 public class DbUtil {
 
 	private String dbUrl = "jdbc:mysql://localhost:3306/db_student_manager_web?useUnicode=true&characterEncoding=utf8";
 	private String dbUser = "root";
-	private String dbPassword = "root";
+	private String dbPassword = "123456";
 	private String jdbcName = "com.mysql.jdbc.Driver";
 	private Connection connection = null;
 	public Connection getConnection(){
 		try {
 			Class.forName(jdbcName);
 			connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
-			System.out.println("Êý¾Ý¿âÁ´½Ó³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("Êý¾Ý¿âÁ´½ÓÊ§°Ü£¡");
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			e.printStackTrace();
 		}
 		return connection;
@@ -35,7 +35,7 @@ public class DbUtil {
 		if(connection != null)
 			try {
 				connection.close();
-				System.out.println("Êý¾Ý¿âÁ´½ÓÒÑ¹Ø±Õ£¡");
+				System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹Ø±Õ£ï¿½");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
